@@ -10,15 +10,15 @@
     >
 
     <ImageView
-        android:layout_width="130dp"
-        android:layout_height="100dp"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/logo13"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <TextView
             android:layout_width="wrap_content"
@@ -26,20 +26,20 @@
             android:text="Click the Button to Scan the Code"
             android:textColor="#B0BEC5"
             android:layout_marginLeft="9dp"
-            android:layout_marginTop="160dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="270dp"
             android:textSize="24sp"
             />
 
-    </LinearLayout>
+    </RelativeLayout>
 
     <Button
         android:id="@+id/buttonScan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="400dp"
         android:background="#B0BEC5"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
+      android:layout_centerHorizontal="true"
         android:text="TAP ME!"
         android:textStyle="bold"/>
 
