@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     //in this case you can display whatever data is available on the qrcode
                     //to a toast
                     Toast.makeText(this, result.getContents(), Toast.LENGTH_LONG).show();
-                    Intent intent=new Intent(MainActivity.this,Nescafe.class);
+                    Intent intent=new Intent(MainActivity.this,Imagess.class);
                     intent.putExtra("qr",result.getContents());
                     startActivity(intent);
                 }
@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         //initiating the qr code scan
+
         qrScan.initiateScan();
     }
 }

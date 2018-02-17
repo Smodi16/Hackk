@@ -10,6 +10,7 @@
         android:label="E-Parky"
         android:roundIcon="@mipmap/logo1"
         android:supportsRtl="true"
+        android:largeHeap="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Splash_Screen">
             <intent-filter>
@@ -20,6 +21,7 @@
         </activity>
         <activity android:name=".Nescafe" />
         <activity android:name=".MainActivity" />
+        <activity android:name=".Imagess"></activity>
     </application>
 
 </manifest>
