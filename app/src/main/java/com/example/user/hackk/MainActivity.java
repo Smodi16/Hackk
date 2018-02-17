@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 } catch (JSONException e) {
                     e.printStackTrace();
                     //if control comes here
-                    //that means the encoded format not matches
+                    //that means the encode d format not matches
                     //in this case you can display whatever data is available on the qrcode
                     //to a toast
                     Toast.makeText(this, result.getContents(), Toast.LENGTH_LONG).show();
