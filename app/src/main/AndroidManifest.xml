@@ -21,7 +21,6 @@
         </activity>
         <activity android:name=".Nescafe" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".Imagess" />
         <activity android:name=".Exit"></activity>
     </application>
 
