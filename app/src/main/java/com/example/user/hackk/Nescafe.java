@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 /**
@@ -27,6 +29,7 @@ import java.net.MalformedURLException;
 public class Nescafe extends AppCompatActivity {
     String[] array={};
     AsyncTask<String, Void, String> s=null;
+    String code;
     // ImageView imageView;
     // private static final String TAG =URL.class.getSimpleName();
     @Override
@@ -34,10 +37,19 @@ public class Nescafe extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nescafe);
         Intent intent=getIntent();
-        String code=intent.getStringExtra("qr");
+        code=intent.getStringExtra("qr");
         //TextView textView=(TextView)findViewById(R.id.text);
-        TextView textView=findViewById(R.id.text);
+       // TextView textView=findViewById(R.id.text);
         ImageView imageView=findViewById(R.id.imageview);
+         Button button=findViewById(R.id.btn1);
+         button.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 Intent intent1=new Intent(Nescafe.this,Exit.class);
+                 intent1.putExtra("qr",code);
+                 startActivity(intent1);
+             }
+         });
         //listView.setAdapter(adapter);
         url ur = new url(Nescafe.this,imageView);
         // TextView textView=(TextView)findViewById(R.id.text);
@@ -45,8 +57,19 @@ public class Nescafe extends AppCompatActivity {
 
             //s=ur.execute("http://192.168.43.200/docs/saloni1.php").get();
             s=ur.execute("https://99smodi.000webhostapp.com/saloni/img_qr.php?value="+code);
+          /*  button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    //   s=ur.execute("https://99smodi.000webhostapp.com/saloni/exit.php?value=");
+                    Intent inten=new Intent(Nescafe.this,Exit.class);
+                    startActivity(inten);
+                }
+            });*/
             // Log.d(TAG,s);
         }catch(Exception IO){}
+
+
 
 
 

@@ -8,9 +8,9 @@
         android:allowBackup="true"
         android:icon="@mipmap/logo1"
         android:label="E-Parky"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/logo1"
         android:supportsRtl="true"
-        android:largeHeap="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Splash_Screen">
             <intent-filter>
@@ -21,7 +21,8 @@
         </activity>
         <activity android:name=".Nescafe" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".Imagess"></activity>
+        <activity android:name=".Imagess" />
+        <activity android:name=".Exit"></activity>
     </application>
 
 </manifest>
