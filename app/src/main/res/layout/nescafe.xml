@@ -15,8 +15,12 @@
         android:id="@+id/imageview"
         android:src="@drawable/ic_launcher_background"/>
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:layout_alignBottom="@id/imageview"
+        android:background="#9E9E9E"
         android:id="@+id/btn1"
         android:text="click to exit"/>
 </RelativeLayout>
