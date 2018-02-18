@@ -22,6 +22,7 @@
         <activity android:name=".Nescafe" />
         <activity android:name=".MainActivity" />
         <activity android:name=".Exit"></activity>
+        <activity android:name=".Imagess"></activity>
     </application>
 
 </manifest>
