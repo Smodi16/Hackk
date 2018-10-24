@@ -70,8 +70,10 @@ class url3 extends AsyncTask<String,Void,String>
         String output1[]=null;
         try {
             output1 = s.split("#111#");
-            Toast.makeText(mContext, "The Free Slot Booked for You is " +output1[id], Toast.LENGTH_SHORT).show();
-           // mTextView.setText(output1[id]);
+            System.out.println(output1);
+            Toast.makeText(mContext, "The Free Slot Booked for You is " +output1[0], Toast.LENGTH_SHORT).show();
+            mTextView.setText(output1[0]);
+            //double lat=output1[1];
 
             //Picasso.with(mContext).load(output1[0].into(imageView);
         }catch (NullPointerException e)

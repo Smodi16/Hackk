@@ -34,8 +34,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //View objects
         buttonScan = (Button) findViewById(R.id.buttonScan);
-       // textViewName = (TextView) findViewById(R.id.textViewName);
-        //textViewAddress = (TextView) findViewById(R.id.textViewAddress);
 
         //intializing scan object
         qrScan = new IntentIntegrator(this);
@@ -66,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     //that means the encode d format not matches
                     //in this case you can display whatever data is available on the qrcode
                     //to a toast
-                    Toast.makeText(this, result.getContents(), Toast.LENGTH_LONG).show();
+                   // Toast.makeText(this, result.getContents(), Toast.LENGTH_LONG).show();
                     Intent intent=new Intent(MainActivity.this,Imagess.class);
                     intent.putExtra("qr",result.getContents());
                     startActivity(intent);

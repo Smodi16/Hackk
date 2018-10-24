@@ -4,6 +4,8 @@ package com.example.user.hackk;
 
 
 import android.content.Intent;
+import android.location.Location;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -34,6 +36,7 @@ public class Imagess extends AppCompatActivity {
     AsyncTask<String, Void, String> s=null;
     Button button;
     String code;
+    Button button2;
     // ImageView imageView;
     // private static final String TAG =URL.class.getSimpleName();
     @Override
@@ -42,42 +45,46 @@ public class Imagess extends AppCompatActivity {
         setContentView(R.layout.activity_imagess);
         Intent intent=getIntent();
         code=intent.getStringExtra("qr");
-        // Toast.makeText(this, ""+code, Toast.LENGTH_SHORT).show();
-        //TextView textView=(TextView)findViewById(R.id.text);
-        //TextView textView=findViewById(R.id.text);
         ImageView imageView=findViewById(R.id.imageview);
         button=findViewById(R.id.btn1);
-       /* imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent inten=new Intent(Imagess.this,Nescafe.class);
-                inten.putExtra("qr",code);
-                startActivity(inten);
-            }
-        });*/
+        button2=findViewById(R.id.navigation);
 
-        button.setOnClickListener(new View.OnClickListener() {
-            url3 ur = new url3(Imagess.this);
-            public void onClick(View v) {
+        url3 ur = new url3(Imagess.this);
+        try{
+            s=ur.execute("https://99smodi.000webhostapp.com/saloni/slot_generation.php?value="+code);
+
+            // Log.d(TAG,s);
+        }catch(Exception IO){}
+
+        button2.setOnClickListener(new View.OnClickListener()
+        {
+
+            url4 ur = new url4(Imagess.this);
+            public void onClick(View view)
+            {
+
                 try{
 
-                    //s=ur.execute("http://192.168.43.200/docs/saloni1.php").get();
-                    s=ur.execute("https://99smodi.000webhostapp.com/saloni/slot_generation.php?value="+code);
+                    s=ur.execute("https://99smodi.000webhostapp.com/saloni/latitude.php?value="+code);
 
                     // Log.d(TAG,s);
                 }catch(Exception IO){}
 
+
+            }
+        });
+        button.setOnClickListener(new View.OnClickListener() {
+
+
+            public void onClick(View v) {
+
+
+
                 Intent inten=new Intent(Imagess.this,Nescafe.class);
                 inten.putExtra("qr",code);
                 startActivity(inten);
-
-                // TextView textView=(TextView)findViewById(R.id.text);
-
-
-
-
             }
-        });//listView.setAdapter(adapter);
+        });
 
 
     }
