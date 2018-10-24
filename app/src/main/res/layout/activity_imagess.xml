@@ -6,11 +6,83 @@
     android:layout_height="match_parent"
     android:background="@drawable/white"
     tools:context="com.example.user.hackk.Imagess">
+
     <ImageView
+        android:id="@+id/imageview"
         android:layout_width="match_parent"
         android:layout_height="450dp"
-        android:id="@+id/imageview"
-        android:src="@drawable/layout"/>
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/layout" />
+
+    <Button
+        android:id="@+id/car6"
+        android:layout_width="47dp"
+        android:layout_height="76dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="158dp"
+
+        android:layout_marginTop="42dp"
+        android:background="@drawable/car"
+        android:text="6" />
+
+    <Button
+        android:id="@+id/car4"
+        android:layout_width="47dp"
+        android:layout_height="76dp"
+        android:layout_alignStart="@+id/car6"
+        android:layout_alignTop="@+id/car3"
+        android:text="4"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/car2"
+        android:layout_width="47dp"
+        android:layout_height="76dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/car6"
+        android:layout_marginBottom="184dp"
+        android:text="2"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/car1"
+        android:layout_width="47dp"
+        android:layout_height="76dp"
+        android:layout_alignStart="@+id/car5"
+        android:layout_alignTop="@+id/car2"
+        android:text="1"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/car8"
+        android:layout_width="47dp"
+        android:layout_height="76dp"
+        android:layout_alignStart="@+id/car7"
+        android:layout_alignTop="@+id/car3"
+        android:text="8"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/car9"
+        android:layout_width="47dp"
+        android:layout_height="76dp"
+        android:layout_alignStart="@+id/car8"
+        android:layout_alignTop="@+id/car1"
+        android:text="9"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/car7"
+        android:layout_width="47dp"
+        android:layout_height="76dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="52dp"
+        android:layout_marginTop="50dp"
+        android:text="7"
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/btn1"
@@ -19,6 +91,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="18dp"
+
         android:background="#ffffff"
         android:text="NEXT" />
 
@@ -31,6 +104,27 @@
         android:layout_marginStart="34dp"
         android:background="#ffffff"
         android:text="Navigate" />
+
+    <Button
+        android:id="@+id/car5"
+        android:layout_width="47dp"
+        android:layout_height="76dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="43dp"
+        android:text="5"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/car3"
+        android:layout_width="47dp"
+        android:layout_height="76dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/car5"
+        android:layout_marginTop="145dp"
+        android:text="3"
+        android:visibility="gone" />
 
 
 </RelativeLayout>

@@ -13,22 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-/**
- * Created by user on 16-02-2018.
- */
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.util.Log;
-import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
-
-
-import java.net.MalformedURLException;
-//import java.net.URL;
 
 
 public class Imagess extends AppCompatActivity {
@@ -37,6 +22,7 @@ public class Imagess extends AppCompatActivity {
     Button button;
     String code;
     Button button2;
+    Button car1,car2,car3,car4,car5,car6,car7,car8,car9;
     // ImageView imageView;
     // private static final String TAG =URL.class.getSimpleName();
     @Override
@@ -48,7 +34,23 @@ public class Imagess extends AppCompatActivity {
         ImageView imageView=findViewById(R.id.imageview);
         button=findViewById(R.id.btn1);
         button2=findViewById(R.id.navigation);
+        car1=findViewById(R.id.car1);
+        car2=findViewById(R.id.car2);
+        car3=findViewById(R.id.car3);
+        car4=findViewById(R.id.car4);
+        car5=findViewById(R.id.car5);
+        car6=findViewById(R.id.car6);
+        car7=findViewById(R.id.car7);
+        car8=findViewById(R.id.car8);
+        car9=findViewById(R.id.car9);
 
+        switch (code)
+        {
+            case "aa":car1.setVisibility(View.VISIBLE);
+            break;
+            case "ss":car2.setVisibility(View.VISIBLE);
+            break;
+        }
         url3 ur = new url3(Imagess.this);
         try{
             s=ur.execute("https://99smodi.000webhostapp.com/saloni/slot_generation.php?value="+code);

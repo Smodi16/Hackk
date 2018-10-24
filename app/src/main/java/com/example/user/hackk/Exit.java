@@ -57,13 +57,18 @@ public class Exit extends AppCompatActivity {
                     // Log.d(TAG,s);
                 }catch(Exception IO){}
 
-
+               onBackPressed();
 
 
             }
         });//listView.setAdapter(adapter);
 
 
+    }
+    public void onBackPressed() {
+        moveTaskToBack(true);
+        android.os.Process.killProcess(android.os.Process.myPid());
+        System.exit(1);
     }
 }
 

@@ -1,6 +1,8 @@
 package com.example.user.hackk;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -38,10 +40,15 @@ public class Nescafe extends AppCompatActivity {
         setContentView(R.layout.nescafe);
         Intent intent=getIntent();
         code=intent.getStringExtra("qr");
+        Context mcontext=this;
         //TextView textView=(TextView)findViewById(R.id.text);
        // TextView textView=findViewById(R.id.text);
         ImageView imageView=findViewById(R.id.imageview);
-         Button button=findViewById(R.id.btn1);
+        Button button=findViewById(R.id.btn1);
+//        SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+//        SharedPreferences.Editor editor = sharedPref.edit();
+//        editor.putInt(getString(R.string.save), code);
+//        editor.commit();
          button.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
